@@ -1,0 +1,32 @@
+.title-bar
+{
+    background-color: #3A559F;
+}
+
+#logo
+{
+    width: 3em;
+    height: 3em;
+    background-color: aliceblue;
+}
+
+.search
+{
+    width: 80%;
+    height: 3em;;
+    padding: 5px;
+    margin: auto;
+    margin-left: 20%;
+}
+
+.submit
+{
+    margin-right: 20%;
+}
+
+#profile-pic
+{
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+}
