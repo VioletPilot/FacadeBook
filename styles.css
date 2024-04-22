@@ -1,137 +1,50 @@
+body
+{
+    padding-top: 2em;
+}
+
 .title-bar
 {
     background-color: #3A559F;
-    width: 100%;
-}
-
-h1
-{
-    margin-left: 10px;
-    color: #EEF0F7;
 }
 
 #logo
 {
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     background-color: #EEF0F7;
 }
 
-.search
+.quick-profile
 {
-    width: 30%;
+    width: 2em;
     height: 2em;
-    padding: 10px;
-    margin: auto;
-    margin-left: 40%;
-    border-radius: 20px;
-}
-
-.submit
-{
-    margin-right: 20%;
-}
-
-#profile-pic
-{
-    width: 50px;
-    margin: auto;
-    border: 2px solid #CDD2D7;
-}
-
-
-#main
-{
-    background-color: #C4C7D0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #EEF0F7;
 }
 
 .back-pic
 {
-    width: 100%;
-    height: 5rem;
-    overflow: hidden;
+    min-width: 100%;
+    max-height: 10rem;
 }
 
-.panel-disp
+.user-big
 {
-    border: 2px solid #CDD2D7;
-    background-color: #E0E4ED;
-    border-radius: 5px;
-    padding: 5px 5px;
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    list-style-type: none;
-    margin: 20px 10px;
-    box-shadow: 2px 2px 3px darkslategrey;
-    width: 80%;
+    width: 10em;
+    height: 10em;
+    background-color: #EEF0F7;
+    margin-top: -20%;
+    border: solid;
 }
 
-.profile-shortcut
+.btn-facebook
 {
-    display: block;
+    background-color: #3A559F;
+    color: #EEF0F7;
 }
 
-#user-pic
+footer
 {
-    border: 2px solid #CDD2D7;
-    background-color: #F4F9FC;
-    box-shadow: 2px 2px 3px darkslategrey inset;
-    display: block;
-}
-
-#user-name
-{
-    font-size: 1.55em;
-    text-align: center;
-}
-
-#user-name:hover
-{
-    font-size: 1.55em;
-    text-decoration: underline;
-}
-
-a
-{
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-}
-
-
-a:hover
-{
-    cursor: pointer;
-}
-
-.tab-desc
-{
-    font-size: 1.30em;
-    text-align: center;
-}
-
-ul
-{
-    width: 100%;
-    list-style-type: none;
-}
-
-li
-{
-    width: 100%;
-    border: 1px solid darkgray;
-    border-radius: 4px;
-}
-
-li:hover
-{
-    background-color: rgb(104, 104, 104);
-    box-shadow: 2px 2px 3px lightgrey inset;
-}
-
-li:active
-{
-    box-shadow: 2px 2px 3px darkgrey inset;
+    background-color: #3A559F;
+    color: #EEF0F7;
 }

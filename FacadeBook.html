@@ -1,111 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <div class="container-fluid full-page">
-        <body>
-            <header>
-                <div class="card title-bar">
-                    <div class="d-flex justify-content-between">
-                        <img id="logo" src="https://cdn-icons-png.flaticon.com/256/124/124010.png">
-                        <h1>facadebook</h1>
-                        <input class="search" name="submit" type="text" placeholder="Search people, posts, things..."></input>
-                        <button class="btn btn-default" type="submit" name="submit"><i class="fas fa-search"></i></button>
-                        <img id="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgpAPoj3uAFcnqWKgYgThNuzx0WnrlZDdPQjYSZHo2dg&s">
-                    </div>
-                </div>
-            </header>
-            <main id="main">
-                <div>
-                    <img class="back-pic" src="https://marketplace.canva.com/EAENvp21inc/1/0/1600w/canva-simple-work-linkedin-banner-qt_TMRJF4m0.jpg">
-                </div>
-                <div class="row">
-                    <div class="col-3 left-panel">
-                        <div class="profile-shortcut panel-disp">
-                            <div class="d-flex justify-content-center">
-                                <img id=".user-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgpAPoj3uAFcnqWKgYgThNuzx0WnrlZDdPQjYSZHo2dg&s">
-                            </div>
-                            <a href="link to profile details"></a><p id="user-name"><strong>Rames Jaynor</strong></p></a>
-                        </div>
-                        <div class="friend-list panel-disp">
-                            <fieldset>
-                                <p class="tab-desc">Friends</p>
-                                <ul>
-                                    <li class="friend"><img class="img-responsive" src="friend-a"><a href="link to bobby"> Bobby</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-b"><a href="link to ann"> Ann</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-c"><a href="link to david"> David</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-d"><a href="link to jimothy"> Jimothy</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-e"><a href="link to william"> William</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-f"><a href="link to raymond"> Raymond</a></li>
-                                </ul>
-                            </fieldset>
-                        </div>
-                        <div class="group-list panel-disp">
-                            <fieldset>
-                                <p class="tab-desc">Groups</p>
-                                <ul>
-                                    <li class="group"><img class="img-responsive" src="group-a"><a href="link to music"> #music</a></li>
-                                    <li class="group"><img class="img-responsive" src="group-b"><a href="link to dancing"> #dancing</a></li>
-                                    <li class="group"><img class="img-responsive" src="group-c"><a href="link to gaming"> #gaming</a></li>
-                                    <li class="group"><img class="img-responsive" src="group-d"><a href="link to movies"> #movies</a></li>
-                                    <li class="group"><img class="img-responsive" src="group-e"><a href="link to nature"> #nature</a></li>
-                                    <li class="group"><img class="img-responsive" src="group-f"><a href="link to books"> #books</a></li>
-                                    <li class="group"><img class="img-responsive" src="group-f"><a href="link to raymond" class="inline"> #books are for nerds seriously who reads them like why</a></li>
-                                </ul>
-                            </fieldset>
-                        </div>
-                        <div class="marketplace ">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Facadebook</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles - Copy.css">
+	</head>
+	<body>
+		<nav class="title-bar navbar-dark fixed-top">
+			<div class="container-fluid d-flex justify-content-between">
+				<a class="navbar-brand mr-auto" href="#">
+					<img src="https://cdn-icons-png.flaticon.com/256/124/124010.png" alt="Logo" class="logo" id="logo">
+					Facadebook
+				</a>
+				<form class="form-inline mx-auto">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search posts, people, groups..."
+					aria-label="Search">
+					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+						<i class="fas fa-search"> Search</i>
+					</button>
+				</form>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+						role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgpAPoj3uAFcnqWKgYgThNuzx0WnrlZDdPQjYSZHo2dg&s" alt="Profile" class="quick-profile profile-icon rounded">
+							<!-- Sample profile image -->
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="#">
+								Settings
+							</a>
+							<a class="dropdown-item" href="#">
+								Logout
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<img class="back-pic" src="https://marketplace.canva.com/EAENvp21inc/1/0/1600w/canva-simple-work-linkedin-banner-qt_TMRJF4m0.jpg">
+				<!-- Left Sidebar -->
+				<aside class="col-lg-3 bg-light card">
+					<!-- User Profile -->
+					<div class="user-profile text-center mb-4">
+						<span class="border border-4 border-dark-subtle">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgpAPoj3uAFcnqWKgYgThNuzx0WnrlZDdPQjYSZHo2dg&s" alt="User Profile" class="user-big user-profile-image rounded">
+						</span>
+						<h5 class="user-name">
+							John Doe
+						</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a href="#">
+									Edit Profile
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Settings
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Logout
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- List of Friends -->
+					<div class="friends-list card">
+						<h5 class="card-header">
+							Friends
+						</h5>
+						<ul class="list-unstyled card-body">
+							<li>
+								<img src="friend1.jpg" alt="Friend" class="friend-image rounded-circle">
+								Friend 1
+							</li>
+							<li>
+								<img src="friend2.jpg" alt="Friend" class="friend-image rounded-circle">
+								Friend 2
+							</li>
+							<li>
+								<img src="friend3.jpg" alt="Friend" class="friend-image rounded-circle">
+								Friend 3
+							</li>
+						</ul>
+					</div>
+					<!-- Groups -->
+					<div class="groups card">
+						<h5 class="card-header">
+							Groups
+						</h5>
+						<ul class="list-unstyled card-body">
+							<li>
+								Group 1
+							</li>
+							<li>
+								Group 2
+							</li>
+							<li>
+								Group 3
+							</li>
+						</ul>
+					</div>
+					<!-- Marketplace -->
+					<div class="marketplace card">
+						<h5 class="card-header">
+							Marketplace
+						</h5>
+						<ul class="list-unstyled card-body">
+							<li>
+								Item 1
+							</li>
+							<li>
+								Item 2
+							</li>
+							<li>
+								Item 3
+							</li>
+						</ul>
+					</div>
+				</aside>
+				<!-- Main Content Area -->
+				<main class="col-lg-6">
+					<!-- Post Creation Box -->
+					<div class="post-creation-box bg-white p-3 mb-3 card">
+						<!--<textarea class="form-control mb-2" placeholder="What's on your mind?">
+						</textarea>
+						<div class="btn-group">
+							<button type="button" class="btn btn-outline-dark btn-facebook">
+								<i class="fas fa-camera"> Add Photos/Videos</i>
+							</button>
+							<button type="button" class="btn btn-outline-dark btn-facebook">
+								<i class="fas fa-paper-plane"> Write a Post</i>
+							</button>
+						</div>-->
+					</div>
+					<!-- Feed of Posts -->
+					<div class="post-feed card">
+						<!-- Temp Post -->
+						<div class="post mb-3">
+							<div class="post-header">
+								<img src="profile.jpg" alt="Profile" class="profile-image rounded-circle">
+								<div class="post-info">
+									<span class="post-author">
+										John Doe
+									</span>
+									<span class="post-time">
+										2 hours ago
+									</span>
+								</div>
+							</div>
+							<div class="post-content">
+								imagine if I wrote something of worth here
+							</div>
+							<div class="post-actions">
+								<button type="button" class="btn btn-outline-primary">
+									Like
+								</button>
+								<button type="button" class="btn btn-outline-primary">
+									Comment
+								</button>
+								<button type="button" class="btn btn-outline-primary">
+									Share
+								</button>
+							</div>
+						</div>
+					</div>
+				</main>
+				<!-- Right Sidebar -->
+				<aside class="col-lg-3 bg-light card">
+					<!-- Friends Online -->
+					<div class="friends-online mb-3 card">
+						<h5 class="card-header">
+							Friends Online
+						</h5>
+						<ul class="list-unstyled card-body">
+							<li>
+								<img src="friend1.jpg" alt="Friend" class="friend-image rounded-circle">
+								Friend 1
+							</li>
+							<li>
+								<img src="friend2.jpg" alt="Friend" class="friend-image rounded-circle">
+								Friend 2
+							</li>
+							<li>
+								<img src="friend3.jpg" alt="Friend" class="friend-image rounded-circle">
+								Friend 3
+							</li>
+						</ul>
+					</div>
+					<!-- Birthday Notifications -->
+					<div class="birthday-notifications card">
+						<h5 class="card-header">
+							Birthday Notifications
+						</h5>
+						<div class="card-body">
+							<p>
+								No birthdays today.
+							</p>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+		<footer>
+			<div class="container-fluid">
+				<div class="row d-flex justify-content-between">
+					<div class="col-4 text-bg-secondary mb-3 border border-light-subtle rounded" style="max-width: 100%;">
+						<div class="card-body">
+						  <h5 class="card-title text-center">About</h5>
+						  <p class="card-text">We steal data</p>
+						</div>
+					  </div>
+					  <div class="col-4 text-bg-secondary mb-3  border border-light-subtle rounded" style="max-width: 100%;">
+						<div class="card-body">
+						  <h5 class="card-title text-center">Privacy</h5>
+						  <p class="card-text">We steal data</p>
+						</div>
+					  </div>
+					  <div class="col-4 text-bg-secondary mb-3 border border-light-subtle rounded" style="max-width: 100%;">
+						<div class="card-body">
+						  <h5 class="card-title text-center">Terms</h5>
+						  <p class="card-text">We steal data</p>
+						</div>
+					  </div>
+				</div>
+			</div>
+			<p class="text-center">Doxable address</p>
+		</footer>
 
-                        </div>
-                    </div>
-                    <div class="col-6 main-panel">
-                        <div class="fb-post">
-
-                        </div>
-                        <div class="prev-posts">
-
-                        </div>
-                    </div>
-                    <div class="col-3 right-panel">
-                        <div class="online-friends panel-disp">
-                            <fieldset>
-                                <p class="tab-desc">Online</p>
-                                <ul>
-                                    <li class="friend"><img class="img-responsive" src="friend-a"><a href="link to bobby"> Bobby</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-b"><a href="link to ann"> Ann</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-c"><a href="link to david"> David</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-d"><a href="link to jimothy"> Jimothy</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-e"><a href="link to william"> William</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-f"><a href="link to raymond"> Raymond</a></li>
-                                    <li class="friend"><img class="img-responsive" src="friend-g"><a href="link to raymond"> Raymond</a></li>
-                                </ul>
-                            </fieldset>
-                        </div>
-                        <div class="birthday panel-disp">
-                                <p class="tab-desc">Birthdays</p>
-                                <ul>
-                                    <li class="birthday-boy"><img class="img-responsive" src="birthday-a"><a href="link to bobby"> Bobby</a></li>
-                                    <li class="birthday-boy"><img class="img-responsive" src="birthday-b"><a href="link to ann"> Ann</a></li>
-                                    <li class="birthday-boy"><img class="img-responsive" src="birthday-c"><a href="link to david"> David</a></li>
-                                    <li class="birthday-boy"><img class="img-responsive" src="birthday-d"><a href="link to jimothy"> Jimothy</a></li>
-                                    <li class="birthday-boy"><img class="img-responsive" src="birthday-e"><a href="link to william"> William</a></li>
-                                    <li class="birthday-boy"><img class="img-responsive" src="birthday-f"><a href="link to raymond"> Raymond</a></li>
-                                    <li class="birthday-boy"><img class="img-responsive" src="birthday-g"><a href="link to raymond"> Raymond</a></li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <footer>
-                <p class="about"></p>
-                <p class="privacy"></p>
-                <p class="terms"></p>
-            </footer>
-        </body>
-    </div>
+		<!-- Bootstrap JS (dropdown) -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min"></script>
+		<script src="scripts.js"></script>
+	</body>
 </html>
