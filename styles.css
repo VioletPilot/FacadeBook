@@ -43,6 +43,18 @@ body
     color: #EEF0F7;
 }
 
+.post-creation-box
+{
+    margin-top: 1em;
+}
+
+.poster-pic
+{
+    width: 2em;
+    height: 2em;
+    background-color: #EEF0F7;
+}
+
 footer
 {
     background-color: #3A559F;

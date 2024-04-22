@@ -1,6 +1,6 @@
 // Test user data
 let users = [
-    { id: 1, name: 'John Doe', profileImage: 'profile1.jpg' },
+    { id: 1, name: 'John Doe', profileImage: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/John_Doe%2C_born_John_Nommensen_Duchac.jpg' },
     { id: 2, name: 'Jane Smith', profileImage: 'profile2.jpg' },
     // Add more users as needed
 ];
@@ -22,7 +22,7 @@ function displayPosts() {
         let postHTML = `
             <div class="post mb-3">
                 <div class="post-header">
-                    <img src="${user.profileImage}" alt="Profile" class="profile-image rounded-circle">
+                    <img src="${user.profileImage}" alt="Profile" class="poster-pic profile-image rounded-circle">
                     <div class="post-info">
                         <span class="post-author">${user.name}</span>
                         <span class="post-time">${post.timestamp}</span>
