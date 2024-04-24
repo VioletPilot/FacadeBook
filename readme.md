@@ -23,7 +23,7 @@ Search Functionality: Users can search for specific posts using a search form. E
 <h2>How to Run the Project<h2>
 Clone the repository to your local machine: git clone <repository-url>
 Open the project directory in your code editor.
-Open the index.html file in a web browser to view the Facadebook webpage.
+Open the facade.html file in a web browser to view the Facadebook webpage.
 
 Interact with the webpage by viewing, liking, commenting on posts, adding new posts, toggling dark mode, and searching for posts.
 
