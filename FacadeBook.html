@@ -8,7 +8,7 @@
 		</title>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="styles - Copy.css">
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
 		<nav class="title-bar navbar-dark fixed-top">
@@ -18,10 +18,11 @@
 					class="logo" id="logo">
 					Facadebook
 				</a>
-				<form class="form-inline mx-auto">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search posts, people, groups..."
+				<form id="search-form" class="form-inline mx-auto">
+					<input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search posts, people, groups..."
 					aria-label="Search">
-					<button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+					<button id="search-button" class="btn btn-outline-light my-2 my-sm-0"
+					type="submit">
 						Search
 						<i class="fas fa-search">
 						</i>
@@ -33,10 +34,23 @@
 						aria-expanded="false">
 							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgpAPoj3uAFcnqWKgYgThNuzx0WnrlZDdPQjYSZHo2dg&s"
 							alt="Profile" class="quick-profile profile-icon rounded">
-							<!--Sample profile image -->
+							<!-- Sample profile image -->
 						</a>
-						<!--Profile dropdown menu-->
+						<!-- Profile dropdown menu -->
 						<ul class="dropdown-menu">
+							<!-- Dark mode toggle -->
+							<li>
+								<input type="checkbox" id="darkModeToggle" class="switch-input">
+								<label for="darkModeToggle" class="switch-label">
+									<span class="switch-inner">
+										<span class="switch-switch">
+										</span>
+									</span>
+								</label>
+								<i id="dark-mode-icon" class="fas fa-moon dark-mode-icon">
+								</i>
+							</li>
+							<!-- Other dropdown items -->
 							<li>
 								<a class="dropdown-item" href="#">
 									<i class="fas fa-user">
@@ -75,24 +89,24 @@
 					<div class="user-profile text-center mb-4 card">
 						<span class="border border-4 border-dark-subtle">
 							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgpAPoj3uAFcnqWKgYgThNuzx0WnrlZDdPQjYSZHo2dg&s"
-							alt="User Profile" class="user-big user-profile-image rounded">
+							alt="User Profile" class="user-big user-profile-image rounded" id="user-profile-image">
 						</span>
-						<h5 class="user-name">
+						<h5 class="user-name" id="user-name">
 							John Doe
 						</h5>
 						<ul class="list-unstyled">
 							<li>
-								<a href="#">
+								<a href="#" id="edit-profile-link">
 									Edit Profile
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" id="settings-link">
 									Settings
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" id="logout-link">
 									Logout
 								</a>
 							</li>
@@ -223,8 +237,9 @@
 					<!-- Post Creation Box -->
 					<div class="post-creation-box bg-white p-3 mb-3 card">
 						<p class="d-inline-flex gap-1 justify-content-center">
-							<button class="btn btn-facebook" type="button" data-bs-toggle="collapse"
-							data-bs-target="#show-post-maker" aria-expanded="false" aria-controls="show-post-maker">
+							<button id="toggle-post-button" class="btn btn-facebook" type="button"
+							data-bs-toggle="collapse" data-bs-target="#show-post-maker" aria-expanded="false"
+							aria-controls="show-post-maker">
 								What's on your mind?
 								<i class="fas fa-pen">
 								</i>
@@ -232,16 +247,16 @@
 						</p>
 						<div class="collapse" id="show-post-maker">
 							<div class="card card-body">
-								<form method="post" action="FacadeBook.html">
-									<textarea class="form-control mb-2" placeholder="What's on your mind?">
+								<form id="post-form" method="post" action="FacadeBook.html">
+									<textarea id="post-content" class="form-control mb-2" placeholder="What's on your mind?">
 									</textarea>
 									<div class="btn-group d-flex justify-content-between">
-										<button type="button" class="btn btn-outline-dark btn-facebook">
+										<button id="add-media-button" type="button" class="btn btn-outline-dark btn-facebook">
 											Add Photos/Videos
 											<i class="fas fa-camera">
 											</i>
 										</button>
-										<button type="button" class="btn btn-outline-dark btn-facebook">
+										<button id="post-button" type="button" class="btn btn-outline-dark btn-facebook">
 											Post
 											<i class="fas fa-paper-plane">
 											</i>
@@ -252,7 +267,7 @@
 						</div>
 					</div>
 					<!-- Post feed -->
-					<div class="post-feed">
+					<div class="post-feed" id="post-feed">
 					</div>
 				</main>
 				<!-- Right Sidebar -->
@@ -272,7 +287,7 @@
 										<h6>
 											<a href="online-friend1">
 												<img src="online-friend1.jpg" alt="Online-Friend" class="user-small rounded-circle">
-												Friend 1 
+												Friend 1
 											</a>
 										</h6>
 									</li>
@@ -280,7 +295,7 @@
 										<h6>
 											<a href="online-friend2">
 												<img src="online-friend2.jpg" alt="Online-Friend" class="user-small rounded-circle">
-												Friend 2 
+												Friend 2
 											</a>
 										</h6>
 									</li>
@@ -288,7 +303,7 @@
 										<h6>
 											<a href="online-friend3">
 												<img src="online-friend3.jpg" alt="Online-Friend" class="user-small rounded-circle">
-												Friend 3 
+												Friend 3
 											</a>
 										</h6>
 									</li>
@@ -348,8 +363,16 @@
 								About
 							</h5>
 							<p class="card-text">
-								We steal data
+								At Facebook, we are constantly iterating, solving problems and working
+								together to connect people all over the world. That’s why it’s important
+								that our workforce reflects the diversity of the people we serve. Hiring
+								people with different backgrounds and points of view helps us make better
+								decisions, build better products and create better experiences for everyone.
 							</p>
+							<br>
+							<a href="https://about.fb.com/company-info./" target="_blank">
+								View about
+							</a>
 						</div>
 					</div>
 					<div class="col-4 text-bg-secondary mb-3  border border-light-subtle rounded"
@@ -359,8 +382,18 @@
 								Privacy
 							</h5>
 							<p class="card-text">
-								We steal data
+								We at Meta want you to understand what information we collect, and how
+								we use and share it. That's why we encourage you to read our Privacy Policy.
+								This helps you use in the way that's right for you.
+								<br>
+								It's important to us that you know how to control your privacy, so we
+								also show you where you can manage your information in the settings of
+								the Meta Products you use. You can to shape your experience.
 							</p>
+							<br>
+							<a href="https://www.facebook.com/privacy/policy/" target="_blank">
+								View Privacy
+							</a>
 						</div>
 					</div>
 					<div class="col-4 text-bg-secondary mb-3 border border-light-subtle rounded"
@@ -370,14 +403,23 @@
 								Terms
 							</h5>
 							<p class="card-text">
-								We steal data
+								Meta builds technologies and services that enable people to connect with
+								each other, build communities and grow businesses. These Terms govern your
+								use of Facebook, Messenger and the other products, features, apps, services,
+								technologies and software that we offer (the Meta Products or Products),
+								except where we expressly state that separate terms (and not these) apply.
+								These Products are provided to you by Meta Platforms, Inc.
 							</p>
+							<br>
+							<a href="https://m.facebook.com/legal/terms" target="_blank">
+								View Terms
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<p class="text-center">
-				Doxable address
+				Facebook, Inc. 1601 Willow Road Menlo Park, CA 94025 United States
 			</p>
 		</footer>
 		<!-- Bootstrap JS (dropdown) -->
@@ -394,4 +436,5 @@
 		<script src="scripts.js">
 		</script>
 	</body>
+
 </html>
