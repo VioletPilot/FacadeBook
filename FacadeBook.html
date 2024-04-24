@@ -8,7 +8,7 @@
 		</title>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="./css/styles.css">
 	</head>
 	<body>
 		<nav class="title-bar navbar-dark fixed-top">
@@ -39,7 +39,7 @@
 						<!-- Profile dropdown menu -->
 						<ul class="dropdown-menu">
 							<!-- Dark mode toggle -->
-							<li>
+							<li class="prof-drop d-flex">
 								<input type="checkbox" id="darkModeToggle" class="switch-input">
 								<label for="darkModeToggle" class="switch-label">
 									<span class="switch-inner">
@@ -112,6 +112,7 @@
 							</li>
 						</ul>
 					</div>
+					<div class=" left-col">
 					<!-- List of Friends -->
 					<div class="friends-list card mt-1">
 						<h5 class="d-inline-flex gap-1 card-header justify-content-center">
@@ -123,30 +124,7 @@
 						<div class="collapse" id="collapseFriendList">
 							<div class="card card-body">
 								<ul class="list-unstyled card-body">
-									<li>
-										<h6>
-											<a href="Friend1">
-												<img src="friend1.jpg" alt="Friend" class="user-small rounded-circle">
-												Friend 1
-											</a>
-										</h6>
-									</li>
-									<li>
-										<h6>
-											<a href="Friend2">
-												<img src="friend2.jpg" alt="Friend" class="user-small rounded-circle">
-												Friend 2
-											</a>
-										</h6>
-									</li>
-									<li>
-										<h6>
-											<a href="Friend3">
-												<img src="friend3.jpg" alt="Friend" class="user-small rounded-circle">
-												Friend 3
-											</a>
-										</h6>
-									</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -231,6 +209,7 @@
 							</div>
 						</div>
 					</div>
+					</div>
 				</aside>
 				<!-- Main Content Area -->
 				<main class="col-lg-6 card mt-1">
@@ -251,11 +230,9 @@
 									<textarea id="post-content" class="form-control mb-2" placeholder="What's on your mind?">
 									</textarea>
 									<div class="btn-group d-flex justify-content-between">
-										<button id="add-media-button" type="button" class="btn btn-outline-dark btn-facebook">
-											Add Photos/Videos
-											<i class="fas fa-camera">
-											</i>
-										</button>
+										<input class="photo-give" type="file" style="display: none;">
+<button id="add-media-button" type="button" class="btn btn-outline-dark btn-facebook">
+    Add Photos/Videos <i class="fas fa-camera"></i>
 										<button id="post-button" type="button" class="btn btn-outline-dark btn-facebook">
 											Post
 											<i class="fas fa-paper-plane">
@@ -271,7 +248,7 @@
 					</div>
 				</main>
 				<!-- Right Sidebar -->
-				<aside class="col-lg-3 bg-light card">
+				<aside class="col-lg-3 bg-light card right-col">
 					<!-- Friends Online -->
 					<div class="online-list card mt-1">
 						<h5 class="d-inline-flex gap-1 card-header justify-content-center">
@@ -362,7 +339,7 @@
 							<h5 class="card-title text-center">
 								About
 							</h5>
-							<p class="card-text">
+							<p class="card-text legal-info">
 								At Facebook, we are constantly iterating, solving problems and working
 								together to connect people all over the world. That’s why it’s important
 								that our workforce reflects the diversity of the people we serve. Hiring
@@ -381,7 +358,7 @@
 							<h5 class="card-title text-center">
 								Privacy
 							</h5>
-							<p class="card-text">
+							<p class="card-text legal-info">
 								We at Meta want you to understand what information we collect, and how
 								we use and share it. That's why we encourage you to read our Privacy Policy.
 								This helps you use in the way that's right for you.
@@ -402,7 +379,7 @@
 							<h5 class="card-title text-center">
 								Terms
 							</h5>
-							<p class="card-text">
+							<p class="card-text legal-info">
 								Meta builds technologies and services that enable people to connect with
 								each other, build communities and grow businesses. These Terms govern your
 								use of Facebook, Messenger and the other products, features, apps, services,
@@ -418,22 +395,25 @@
 					</div>
 				</div>
 			</div>
-			<p class="text-center">
+			<p class="text-center legal-address">
 				Facebook, Inc. 1601 Willow Road Menlo Park, CA 94025 United States
 			</p>
 		</footer>
 		<!-- Bootstrap JS (dropdown) -->
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-		crossorigin="anonymous">
+				integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+				crossorigin="anonymous">
 		</script>
+
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-		integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-		crossorigin="anonymous">
+				integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+				crossorigin="anonymous">
 		</script>
+
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js">
 		</script>
-		<script src="scripts.js">
+
+		<script src="./js/scripts.js">
 		</script>
 	</body>
 
